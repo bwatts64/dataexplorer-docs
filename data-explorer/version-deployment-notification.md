@@ -18,11 +18,11 @@ Being a managed PaaS Service, new versions of Azure Data Explorer are pushed out
 
 In the Azure Activity blade of the Azure Portal, an event will be generated anytime we do a ADX software deployment. The Operation Name for the event will be "Cluster Version deployment"
 
-![version-activity-log](../images/version-deployment-notification/activity-log-event.png)
+![version-activity-log](../media/version-deployment-notification/activity-log-event.png)
 
 As part of each event, the properties will contain the Start Time, End Time, and the Duration
 
-![event-properites](../images/version-deployment-notification/event-properties.png)
+![event-properites](../media/version-deployment-notification/event-properties.png)
 
 This notification happens when the software deployment occurs. As such it is not intended to notify the customer of upcoming maintenance. But instead to help them with root cause analysis by allowing them to correlate behavior observed on the cluster to software deployments.
 
@@ -43,7 +43,7 @@ AzureActivity
 
 The results would look something like this:
 
-![la-query](../images/version-deployment-notification/la-result.png)
+![la-query](../media/version-deployment-notification/la-result.png)
 
 Now that we have the data in Log Analytics and a query to parse the information we can setup alerts via Azure Monitor or visualize it using tools such as [Azure Workbooks](https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview), [ADX Dashboards](https://learn.microsoft.com/en-us/azure/data-explorer/azure-data-explorer-dashboards), or [Grafana](https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/grafana-plugin).
 
